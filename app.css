@@ -1,0 +1,145 @@
+/* *{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.border{
+    border: 2px solid black;
+    margin: 50px;
+    width: 90vmin;
+    height: 92vmin;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows:repeat(18 ,1fr);
+    background-color: rgba(255, 255, 255, 0.151);
+}
+.food{
+    background-color: red;
+    border: 0.25vmin solid black;
+}
+.head{
+    background-color: rgb(0, 255, 64);
+}
+.snakebody{
+    background-color: purple;
+    border: .25vmin solid black;
+    border-radius: 12px;
+} */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #222;
+    position: relative;
+}
+
+/* Score Box */
+#scorebox {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+}
+
+/* Game Container */
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 60px; /* Space below score */
+}
+
+/* Game Border */
+.border {
+    border: 5px solid white;
+    width: 90vmin;
+    height: 90vmin;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(18, 1fr);
+    background-color: black;
+    position: relative;
+}
+
+/* Snake and Food */
+.food {
+    background-color: red;
+    border: 0.25vmin solid black;
+    border-radius: 5px;
+}
+
+.head {
+    background-color: yellow;
+    border-radius: 5px;
+}
+
+.snakebody {
+    background-color: lime;
+    border: 0.25vmin solid black;
+    border-radius: 5px;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+}
+
+/* Arrange Up and Down Buttons */
+.vertical-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #666;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .border {
+        width: 85vmin;
+        height: 85vmin;
+    }
+
+    button {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+}
